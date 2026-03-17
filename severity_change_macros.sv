@@ -38,7 +38,7 @@ module tb;
   initial begin
     d = new("DRV", null);
    // d.set_report_severity_override(UVM_FATAL, UVM_ERROR);
-    d.set_report_severity_id_override(UVM_FATAL, "DRV", UVM_ERROR); // overiding the DRV1 by the DRV
+    d.set_report_severity_id_override(UVM_FATAL, "DRV", UVM_ERROR); // Demotes FATAL messages with ID "DRV" to ERROR severity.
     d.run();
   end
   
